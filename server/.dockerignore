@@ -1,0 +1,7 @@
+.idea/
+.gitignore
+database.json
+docker-compose.yml
+Dockerfile
+todo-list.iml
+README.md

@@ -1,0 +1,14 @@
+ <modal name="fileUpload"
+        :height="'auto'"
+        @before-open="beforeOpen"
+        @closed="closeModalHandler">
+     <vue-dropzone ref="myVueDropzone" id="dropzone"
+                   :options="dropzoneOptions"
+                    class="dropZone" :useCustomSlot=true>
+         <div class="dropzone-custom-content">
+             <h3 class="dropzone-custom-title">Drag and drop to upload photos!</h3>
+             <div class="subtitle">...or click to select a file from your computer</div>
+         </div>
+     </vue-dropzone>
+ </modal>
+

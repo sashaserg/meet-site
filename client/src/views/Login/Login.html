@@ -1,0 +1,27 @@
+<div class="loginWrapper">
+    <div class="loginContent">
+        <div class="header">
+            <h1>Sign in to meeting service<small>Enter your details below</small></h1>
+        </div>
+        <div class="form">
+            <TextInput fieldTitle="Email Address"
+                       fieldName="email"
+                       placeholder="email@email.com"
+                       fieldType="email"
+                       :fieldValue="email"
+                       :fieldChange="changeMethod"></TextInput>
+            <TextInput fieldTitle="Password"
+                       fieldName="password"
+                       placeholder="Enter your password"
+                       fieldType="password"
+                       :fieldValue="password"
+                       :fieldChange="changeMethod"></TextInput>
+            <div class="btnContainer"><Button name="Sign in"
+                         :type="'primaryBtn'"
+                         :handler="onLoginClicked"
+                         :isActive="isLoginBtnActive"></Button></div>
+            <a @click="toRegisterPageHandler()" class="toRegistrationBtn">Not registered yet?</a>
+        </div>
+
+    </div>
+</div>
