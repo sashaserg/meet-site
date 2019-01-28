@@ -16,8 +16,11 @@
       </div>
     </nav>
     <div class="userPanel" v-if="this.currentUser">
-      <dropDownMenu buttonName="Profile" :itemList="dropDownItems" topOffset="38"></dropDownMenu>
-      <div class="userPic" :style="{ backgroundImage: this.currentUser.profilePicture }"
+      <dropDownMenu buttonName="Profile"
+                    :itemList="dropDownItems"
+                    topOffset="38"></dropDownMenu>
+      <div class="userPic"
+           :style="{ backgroundImage: 'url(' + currentUser.profilePicture + ')' }"
            @click="myProfileClick"></div>
     </div>
   </div>
@@ -120,8 +123,7 @@
       .userPic
         border-radius: 50%
         background-position: center
-        background-size: contain
-        background-image: url("http://localhost:3000/public/img/1547898703148-all_def_pic.png")
+        background-size: cover
         height: 50px
         width: 50px
         cursor: pointer
